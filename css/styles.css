@@ -336,9 +336,9 @@ body {
   font-weight: 700;
   line-height: 2;
   letter-spacing: 0.06em;
-  padding: 20px 24px 4px 24px;
+  padding: 20px 24px 4px;
 }
 .achieve-card p {
   line-height: 1.9;
-  padding: 4px 24px 20px 24px;
+  padding: 4px 24px 20px;
 }
