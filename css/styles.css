@@ -77,7 +77,6 @@ body {
 .contacts {
   display: flex;
   gap: 40px;
-  justify-content: flex-end;
 }
 .menu,
 .contacts {
@@ -96,20 +95,18 @@ body {
   display: flex;
   align-items: center;
   color: var(--color-medium);
-  --icon-color: currentColor;
+  fill: currentColor;
 }
 .link:hover,
 .link:focus,
 .link-contact:hover {
   color: var(--color-secondary);
-  fill: var(--icon-color);
+  fill: currentColor;
 }
-.icon-mail::after {
-  content: 'info@example.com';
+.text-mail {
   padding: 4px 0 0 10px;
 }
-.icon-phone::after {
-  content: '+48 111 111 111';
+.text-phone {
   padding: 4px 0 0 10px;
 }
 .section-slogan {
@@ -246,9 +243,11 @@ body {
   fill: var(--color-secondary);
 }
 .dark-bg {
-  height: 252px;
-  padding: 60px 0;
+  padding: 56px 0;
   background-color: var(--color-bgcolor-dark);
+}
+.footer-wrapper {
+  display: flex;
 }
 .footer-col {
   float: left;
