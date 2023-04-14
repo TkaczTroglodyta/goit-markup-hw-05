@@ -9,6 +9,7 @@
   --color-border-primary: #ececec;
   --color-bgcolor-light: #f5f4fa;
   --color-bgcolor-dark: #2f303a;
+  --shadow-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --font-family-primary: 'Roboto', sans-serif;
   --font-family-secondary: 'Raleway', sans-serif;
 }
@@ -343,15 +344,13 @@ body {
 .achieve-card {
   position: relative;
   cursor: pointer;
-  /* height: 404px; */
-  background-color: var(--color-light);
   border: 1px solid #eeeeee;
 }
 .achieve-card:hover,
 .achieve-card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--shadow-transition);
 }
 .achieve-card h3 {
   font-size: 18px;
@@ -379,7 +378,7 @@ body {
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
 }
-.achieve-box:hover .achieve-overlay {
+.achieve-card:hover .achieve-overlay {
   transform: translateY(0);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--shadow-transition);
 }
