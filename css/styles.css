@@ -9,7 +9,7 @@
   --color-border-primary: #ececec;
   --color-bgcolor-light: #f5f4fa;
   --color-bgcolor-dark: #2f303a;
-  --shadow-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --hover-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --font-family-primary: 'Roboto', sans-serif;
   --font-family-secondary: 'Raleway', sans-serif;
 }
@@ -75,9 +75,32 @@ body {
   display: flex;
   gap: 40px;
 }
+.link {
+  color: var(--color-primary);
+  transition: var(--hover-transition);
+}
+.link-contact {
+  display: flex;
+  align-items: center;
+  color: var(--color-medium);
+  fill: currentColor;
+  transition: var(--hover-transition);
+}
+.link:hover,
+.link:focus,
+.link-contact:hover {
+  color: var(--color-secondary);
+  fill: currentColor;
+}
 .contacts {
   display: flex;
   gap: 40px;
+}
+.text-mail {
+  padding: 4px 0 0 10px;
+}
+.text-phone {
+  padding: 4px 0 0 10px;
 }
 .menu,
 .contacts {
@@ -88,27 +111,6 @@ body {
 }
 .top-line {
   border-top: 1px solid var(--color-border-primary);
-}
-.link {
-  color: var(--color-primary);
-}
-.link-contact {
-  display: flex;
-  align-items: center;
-  color: var(--color-medium);
-  fill: currentColor;
-}
-.link:hover,
-.link:focus,
-.link-contact:hover {
-  color: var(--color-secondary);
-  fill: currentColor;
-}
-.text-mail {
-  padding: 4px 0 0 10px;
-}
-.text-phone {
-  padding: 4px 0 0 10px;
 }
 .section-slogan {
   padding: 200px 0;
@@ -237,6 +239,7 @@ body {
   fill: var(--color-tertiary);
   padding: 6px;
   border-radius: 50%;
+  transition: var(--hover-transition);
 }
 .icon-social:hover {
   fill: var(--color-light);
@@ -251,6 +254,7 @@ body {
   border: 1px solid var(--color-tertiary);
   border-radius: 4px;
   background: var(--color-light);
+  transition: var(--hover-transition);
 }
 .rect-c:hover,
 .rect-c:focus {
@@ -259,6 +263,7 @@ body {
 .icon-customer {
   padding-top: 2px;
   fill: var(--color-tertiary);
+  transition: var(--hover-transition);
 }
 .icon-customer:hover,
 .icon-customer:focus {
@@ -307,6 +312,7 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 6px;
   border-radius: 50%;
+  transition: var(--hover-transition);
 }
 .footer-icon-social:hover {
   fill: var(--color-light);
@@ -328,6 +334,7 @@ body {
   padding: 6px 22px;
   border: none;
   border-radius: 4px;
+  transition: var(--hover-transition);
 }
 .btn-filter:hover,
 .btn-filter:focus {
@@ -345,12 +352,12 @@ body {
   position: relative;
   cursor: pointer;
   border: 1px solid #eeeeee;
+  transition: var(--hover-transition);
 }
 .achieve-card:hover,
 .achieve-card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: var(--shadow-transition);
 }
 .achieve-card h3 {
   font-size: 18px;
@@ -377,6 +384,7 @@ body {
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
+  transition: var(--hover-transition);
 }
 .achieve-overlay p {
   font-size: 18px;
@@ -387,5 +395,4 @@ body {
 }
 .achieve-card:hover .achieve-overlay {
   transform: translateY(0);
-  transition: var(--shadow-transition);
 }
