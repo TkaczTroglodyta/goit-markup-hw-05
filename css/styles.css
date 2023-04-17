@@ -352,7 +352,6 @@ body {
 /* modal window */
 .modal-backdrop {
   position: fixed;
-  display: none; /* instead "visibility: none;", just for code preparation*/
   left: 0;
   top: 0;
   width: 100%;
@@ -373,16 +372,22 @@ body {
 }
 .btn-modal-close {
   position: absolute;
+  cursor: pointer;
   top: 8px;
   right: 8px;
   width: 30px;
   height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
   background-color: var(--color-light);
 }
 .btn-modal-close:hover,
 .btn-modal-close:focus {
 }
 .is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 /* portfolio */
 .selection-btns {
