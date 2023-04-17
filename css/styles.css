@@ -75,9 +75,42 @@ body {
   display: flex;
   gap: 40px;
 }
-.link {
+.link,
+.link-active {
+  position: relative;
+  padding: 32px 0;
   color: var(--color-primary);
   transition: var(--hover-transition);
+}
+.link-active {
+  color: var(--color-secondary);
+}
+.link::after,
+.link-active::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--color-secondary);
+  border-radius: 2px;
+  transition: var(--hover-transition); /* comment this to disable */
+}
+.link:hover,
+.link:focus,
+.link-contact:hover {
+  color: var(--color-secondary);
+  fill: currentColor;
+}
+.link:hover::after,
+.link:focus::after {
+  width: 100%;
+  /* transition-property: none; */ /* uncomment this to enable */
+}
+.link-active::after {
+  width: 100%;
+  transition-property: none;
 }
 .link-contact {
   display: flex;
@@ -85,12 +118,6 @@ body {
   color: var(--color-medium);
   fill: currentColor;
   transition: var(--hover-transition);
-}
-.link:hover,
-.link:focus,
-.link-contact:hover {
-  color: var(--color-secondary);
-  fill: currentColor;
 }
 .contacts {
   display: flex;
