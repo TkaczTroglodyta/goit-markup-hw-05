@@ -385,8 +385,8 @@ body {
 }
 .btn-modal-close:hover,
 .btn-modal-close:focus {
-  color: var(--color-light);
-  background-color: var(--color-secondary);
+  border: 1px solid rgba(33, 150, 243, 0.2);
+  fill: var(--color-secondary);
 }
 .is-hidden {
   opacity: 0;
