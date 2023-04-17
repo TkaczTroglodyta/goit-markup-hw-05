@@ -62,7 +62,7 @@
             Efektywne rozwiązania<br />
             dla waszego biznesu
           </h1>
-          <button class="btn-slogan" type="button">Zamów usługę</button>
+          <button class="btn-slogan" type="button" data-modal-open>Zamów usługę</button>
         </div>
       </section>
       <!-- 4 informations -->
@@ -133,14 +133,14 @@
             </li>
             <li>
               <figure class="activ-img">
-              <img src="images/img_02.jpg" alt="Aplikacje mobilne" width="370" height="294" />
-              <figcaption class="activ-img-title"><h3>Aplikacje mobilne</h3></figcaption>
+                <img src="images/img_02.jpg" alt="Aplikacje mobilne" width="370" height="294" />
+                <figcaption class="activ-img-title"><h3>Aplikacje mobilne</h3></figcaption>
+              </figure>
             </li>
-            </figure>
             <li>
               <figure class="activ-img">
-              <img src="images/img_03.jpg" alt="Rozwiązania graficzne" width="370" height="294" />
-              <figcaption class="activ-img-title"><h3>Rozwiązania graficzne</h3></figcaption>
+                <img src="images/img_03.jpg" alt="Rozwiązania graficzne" width="370" height="294" />
+                <figcaption class="activ-img-title"><h3>Rozwiązania graficzne</h3></figcaption>
               </figure>
             </li>
           </ul>
@@ -346,6 +346,11 @@
         </div>
       </div>
     </footer>
+    <div class="modal-backdrop is-hidden" data-modal>
+      <div class="modal-content">
+        <button type="button" class="btn-modal-close" data-modal-close></button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
